@@ -6,15 +6,17 @@ const Employee = require("./Employee");
 class Engineer extends Employee {
     //constructor
 //take the passed in variables: name, id, email
-    constructor(name, id, email, role) {
-        this.name = name;
-        this.id = id;
-        this.email = email;
-        this.role = role;
-
-            super ("Engineer");
-        
-        //what to do with these??? no clue...
+    constructor(name, email, id, github) {
+        super(name, email, id);
+        this.github = github;
     }
+    getGithub() {
+        return this.github;
+    }
+    getRole() {
+        return "Engineer";
+    }
+    
 }
+module.exports = Engineer;
 
